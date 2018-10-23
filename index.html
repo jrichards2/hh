@@ -1,48 +1,82 @@
 <html>
 <head>
-    <title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <style>
-body, html {
-    height: 100%;
-    font-family: "Inconsolata", sans-serif;
-}
-.menu {
-    display: none;
-}
+    body {
+        height: 100%;
+        font-family: "Inconsolata", sans-serif;
+        margin: 0;
+    }
+    a {
+        color: aliceblue;
+        text-decoration: none;
+    }
+    .header {
+        width: 100%;
+        height: 50px;
+        background-color: black;
+    }
+    .tab {
+        width: 100px;
+        float: left;
+        
+    }
+    .tab button {
+        background-color: inherit;
+        border: none;
+        width: 100%;
+        height: 100%;
+        color: gainsboro;
+        font-size: 14;
+
+    }
+    .tab button:hover {
+        color: white;
+    }
+    .tab button.active {
+        color: deepskyblue;
+        font-size: 15;
+    }
+    .dayscontainer {
+        width: 700px;
+    }
+    .center-me {
+        margin: 0 auto;
+    }
 </style>
-    </head>
-<body>
+<script>
+    function onload() {
+        var d = new Date();
+        document.getElementById("day" + d.getDay()).className += " active";
+    }
+</script>
+</head>
+<body onload="onload()">
 <!-- Links (sit on top) -->
-<div class="w3-top">
-  <div class="w3-row w3-padding w3-black">
-    <div class="w3-col s3"></div>
-    <div class="w3-col s1">
-      <a href="#mon" class="w3-button w3-block w3-black">MON</a>
+<div class="header">
+  <div class="dayscontainer center-me">
+    <div class="tab">
+      <button href="#mon" id="day1">MON</button>
     </div>
-    <div class="w3-col s1">
-      <a href="#tues" class="w3-button w3-block w3-black">TUES</a>
+    <div class="tab">
+      <button href="#tues" id="day2">TUES</button>
     </div>
-    <div class="w3-col s1">
-      <a href="#wed" class="w3-button w3-block w3-black">WED</a>
+    <div class="tab">
+      <button href="#wed" id="day3">WED</button>
     </div>
-    <div class="w3-col s1">
-      <a href="#thurs" class="w3-button w3-block w3-black">THURS</a>
+    <div class="tab">
+      <button href="#thurs" id="day4">THUR</button>
     </div>
-     <div class="w3-col s1">
-      <a href="#fri" class="w3-button w3-block w3-black">FRI</a>
+     <div class="tab">
+      <button href="#fri" id="day5">FRI</button>
     </div>
-    <div class="w3-col s1">
-      <a href="#sat" class="w3-button w3-block w3-black">SAT</a>
+    <div class="tab">
+      <button href="#sat" id="day6">SAT</button>
     </div>
-    <div class="w3-col s1">
-      <a href="#sun" class="w3-button w3-block w3-black">SUN</a>
+    <div class="tab">
+      <button href="#sun" id="day0">SUN</button>
     </div>
-    <div class="w3-col s2"></div>
   </div>
 </div>
+<div></div>
 </body>
 </html>
