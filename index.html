@@ -2,7 +2,6 @@
 <head>
 <style>
     body {
-        height: 100%;
         font-family: "Inconsolata", sans-serif;
         margin: 0;
     }
@@ -14,6 +13,12 @@
         width: 100%;
         height: 50px;
         background-color: black;
+    }
+    .full-width {
+        width: 100%;
+    }
+    .full-height {
+        height: 100%;
     }
     .tab {
         width: 100px;
@@ -36,8 +41,44 @@
         color: deepskyblue;
         font-size: 15;
     }
-    .dayscontainer {
+    .header-container {
         width: 700px;
+    }
+    .background-blue {
+        background-color: #0077b3
+    }
+    .background-yellow {
+        background-color: #ffdb4d
+    }
+    .background-green {
+        background-color: #79d2a6
+    }
+    .item-box {
+        width: 250px;
+        height: 250px;
+        text-align: center;
+
+    }
+    .tab-container {
+        width: 80%;
+        
+    }
+    .item-box .title {
+        padding-top: 20px;
+        color: deepskyblue;
+    }
+    .item-box .discription {
+        color: black;
+        height: 20px;
+    }
+    .item-box .time {
+        padding: 10px;
+        color: black;
+        font-style:italic;
+        height: 20px;
+    }
+    .margin {
+        margin: 20px;
     }
     .center-me {
         margin: 0 auto;
@@ -53,7 +94,7 @@
 <body onload="onload()">
 <!-- Links (sit on top) -->
 <div class="header">
-  <div class="dayscontainer center-me">
+  <div class="header-container center-me">
     <div class="tab">
       <button href="#mon" id="day1">MON</button>
     </div>
@@ -77,6 +118,36 @@
     </div>
   </div>
 </div>
-<div></div>
+<div class="">
+    <div class="tab-container center-me">
+       <div class="item-box margin background-blue">
+<!--           <img width="80%" src="https://www.bettolinokitchen.com/wp-content/themes/gaetano/assets/images/bettolino-kitchen-logo-white.png" alt="Bettolino" />-->
+        <div class="name full-width ">Bettolino</div>
+        <div class="title full-width">date night</div>
+        <div class="time">5pm - 9pm</div>
+        <div class="discription full-width">
+            <div>Appetizer,</div>
+            <div>2x entrees,</div>
+            <div>Dessert</div>
+            <div>$50</div>
+        </div> 
+        </div>
+        <div class="item-box margin background-yellow">
+        <div class="name full-width">Creme De La Crepe</div>
+        <div class="title full-width">1/2 off wine bottles</div>
+        <div class="time">All night</div>
+        </div>
+        <div class="item-box margin background-green">
+        <div class="name full-width">Good Stuff</div>
+        <div class="title full-width">$5 domestic beers</div>
+        <div class="time">5pm - close</div>
+        </div>
+        <div class="item-box margin">
+        <div class="name full-width">Sophies</div>
+        <div class="title full-width">No corkage fees</div>
+        <div class="time">All day</div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
